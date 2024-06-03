@@ -6,7 +6,10 @@ const ExpressError = require("./expressError")
 app.use(express.json());
 
 const companiesRoutes = require('./routes/companies');
-const invoicesRoutes = require('./routes/invoices')
+const invoicesRoutes = require('./routes/invoices');
+
+console.log('Type of companiesRoutes:', typeof companiesRoutes);
+console.log('Type of invoicesRoutes:', typeof invoicesRoutes);
 
 app.use('/companies', companiesRoutes);
 app.use('/invoices', invoicesRoutes);
